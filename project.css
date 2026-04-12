@@ -1,0 +1,118 @@
+/* This is the style for all pages. */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #2ba90575;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Header */
+.header-area {
+    background-color: #567805;
+    padding: 1rem;
+}
+
+/* Navigation */
+.nav-area ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+/* footer */
+.footer-area {
+    background-color: #567805;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Table Styling */
+.game-table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background-color: #567805;
+    color: #ffffff;
+}
+
+/* Header cells */
+.game-table th {
+    background-color: #3F5A04;
+    padding: 12px;
+    border: 1px solid #2E4003;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Data cells */
+.game-table td {
+    padding: 12px;
+    border: 1px solid #2E4003;
+    text-align: center;
+}
+
+/* Alternative row color */
+.game-table tr:nth-child(even) {
+    background-color: #4C6D05;
+}
+
+.game-table th,
+.game-table td {
+    color: #ffffff;
+}
+
+/* Makes table responsive */
+@media (max-width: 600px) {
+    .game-table {
+        font-size: 0.8rem;
+    }
+}
+
+.form-area {
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto;
+    background-color: #567805;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-area label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.form-area input,
+.form-area textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #2E4003;
+    font-family: Arial, sans-serif;
+}
+
+.form-area button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #3F5A04;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-area button:hover {
+    background-color: #2E4003;
+}
+
+@media (max-width: 600px) {
+    .form-area {
+        width: 95%;
+    }
+}
