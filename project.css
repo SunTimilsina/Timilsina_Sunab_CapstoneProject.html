@@ -1,9 +1,15 @@
+/* Global Reset for Better Responsiveness */
+* {
+    box-sizing: border-box;
+}
+
 /* This is the style for all pages. */
 body{
     font-family: Arial, sans-serif;
     background-color: #2ba90575;
     color: #ffffff;
     margin: 0;
+    line-height: 1.5;
 }
 
 /* Header */
@@ -18,6 +24,17 @@ body{
     display: flex;
     gap: 1rem;
     padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-area a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-area a:hover {
+    text-decoration: underline;
 }
 
 /* footer */
@@ -116,3 +133,47 @@ body{
         width: 95%;
     }
 }
+
+.gallery  {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #3F5A04;
+}
+
+details {
+    background-color: #567805;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border: 1px solid #3F5A04;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+details p {
+    margin-top: 0.5rem;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+    
