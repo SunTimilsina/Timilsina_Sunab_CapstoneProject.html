@@ -74,5 +74,25 @@
             <p>&copy; 2026 Game Finder</p>
             <a href="mailto:Sunab@Timilsina.com">Sunab@Timilsina.com</a>
         </footer>
+        <script>
+            window.onload = function() {
+                alert("Welcome to Game Finder! Check out our recommended games below.");
+            };
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                let index = 0;
+                const images = $(".gallery-grid img");
+                images.hide().eq(0).show();
+
+                function showNext() {
+                    images.eq(index).fadeOut(500);
+                    index = (index + 1) % images.length;
+                    images.eq(index).fadeIn(500);
+                }
+                setInterval(showNext, 2000);
+            });
+        </script>
     </body>
 </html>
