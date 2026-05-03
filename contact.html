@@ -24,7 +24,7 @@
         <main>
             <section class="form-area">
                 <h2>Contact Us</h2>
-                <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                <form name="contactForm" method="post" action="https://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm()">
                     <label for="name">Name</label>
                     <input id="name" name="name" type="text" required>
 
@@ -43,5 +43,26 @@
             <p>&copy; 2026 Game Finder</p>
             <a href="mailto:Sunab@Timilsina.com">Sunab@Timilsina.com</a></p>
         </footer>
+        <script>
+            function validateForm() {
+                let name = document.forms["contactForm"]["name"].value;
+                let email = document.forms["contactForm"]["email"].value;
+                let message = document.forms["contactForm"]["message"].value;
+                if (name === "") {
+                    alert("Please enter your name.");
+                    return false;
+                }
+                if (email === "") {
+                    alert("Please enter your email.");
+                    return false;
+                }
+                if (message === "") {
+                    alert("Please enter your message.");
+                    return false;
+                }
+                
+                return true;
+            }
+        </script>
     </body>
 </html>
